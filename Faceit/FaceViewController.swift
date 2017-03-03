@@ -91,9 +91,11 @@ class FaceViewController: UIViewController {
     
     
     private func updateUI() {
-        setEyes()
-        faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
-        faceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
+        if faceView != nil {
+            setEyes()
+            faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
+            faceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
+        }
     }
     
 }

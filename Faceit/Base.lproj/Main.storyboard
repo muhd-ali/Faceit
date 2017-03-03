@@ -24,6 +24,10 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TQH-O2-kuM" customClass="FaceView" customModule="Faceit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tpv-pZ-ddV" appends="YES" id="y5E-ga-Qqw"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,10 +38,36 @@
                             <constraint firstItem="TQH-O2-kuM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ryv-vd-rDH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="TQH-O2-kuM" id="0a4-iW-Zwl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tpv-pZ-ddV">
+                    <connections>
+                        <action selector="toggleEyes:" destination="BYZ-38-t0r" id="IEM-5Q-Kgr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-511" y="-1"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oHe-4w-EK7">
+            <objects>
+                <viewController id="jNj-ig-9qb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QjN-dJ-xHK"/>
+                        <viewControllerLayoutGuide type="bottom" id="SgL-3G-Fyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fyt-wJ-66c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6C-22-hYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="-1"/>
         </scene>
     </scenes>
 </document>
